@@ -54,10 +54,10 @@ with open(logfile, "w") as fp:
         if mem.endswith("g"):
             mem = mem[:-1]
         elif mem.endswith("m"):
-            mem = float(mem[:-1]) / (1000.0)
+            mem = float(mem[:-1]) / (1024.0)
             mem = str(round(mem, 1))
         else:
-            mem = float(mem) / (1000.0 ** 2)
+            mem = float(mem) / (1024.0 ** 2)
             mem = str(round(mem, 1))
 
         cpu = top_data[8]
